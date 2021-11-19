@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', Arial, sans-serif; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+
+.solo {
+  display: block; }
+
+#landing {
+  min-height: 115vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/landing.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #landing h1 {
+    text-align: center;
+    font-size: 104px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: -250px;
+    text-transform: uppercase; }
+
+#about {
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F2F2F2; }
+  #about #headshot {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #about #headshot img {
+      height: 350px; }
+  #about #bio {
+    flex: 0 0 50%;
+    text-align: center; }
+    #about #bio h2 {
+      margin: 15px; }
+    #about #bio p {
+      line-height: 1.6em; }
+
+#portfolio {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/blueprints.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  #portfolio h2 {
+    color: #F2F2F2;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 32px; }
+  #portfolio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+    gap: 15px;
+    justify-content: center; }
+  #portfolio .proj {
+    background-color: #F2F2F2;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    #portfolio .proj:hover .overlay {
+      display: flex; }
+  #portfolio .overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer; }
+    #portfolio .overlay h3 {
+      text-align: center;
+      color: #F2F2F2;
+      font-size: 28px;
+      font-weight: 100; }
+  #portfolio #proj-1 {
+    background-image: url(../images/remodel_1.jpg); }
+  #portfolio #proj-2 {
+    background-image: url(../images/bathroom_1.jpg); }
+  #portfolio #proj-3 {
+    background-image: url(../images/Metal.jpg); }
+  #portfolio #proj-4 {
+    background-image: url(../images/landscaping.jpg); }
+  #portfolio #proj-5 {
+    background-image: url(../images/bathroom_2.jpg); }
+  #portfolio #proj-6 {
+    background-image: url(../images/remodel_2.jpg); }

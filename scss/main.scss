@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+/* Color Theme Swatches in Hex */
+$color-1: #F2F2F2;
+$color-2: #024059;
+$color-3: #F2EFBD;
+$color-4: #BF7C41;
+$color-5: #A67153;
+
+/* Color Theme Swatches in RGBA */
+$color-1-rgba: rgba(242,242,242, 1);
+$color-2-rgba: rgba(1,64,89, 1);
+$color-3-rgba: rgba(242,238,188, 1);
+$color-4-rgba: rgba(191,123,65, 1);
+$color-5-rgba: rgba(165,113,82, 1);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.solo{
+    display: block;
+}
+
+#landing{
+    min-height: 115vh;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/landing.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        text-align: center;
+        font-size: 104px;
+        color: #fff;
+        font-weight: 300;
+        margin-top: -250px;
+        text-transform: uppercase;
+    }
+}
+
+#about{
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-1;
+
+    #headshot{
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+        height: 350px;
+        }
+    }
+
+    #bio{
+        flex: 0 0 50%;
+        text-align: center;
+        h2{
+            margin: 15px;
+        }
+        p{
+            line-height: 1.6em;
+        }
+    }
+}
+
+#portfolio{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/blueprints.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h2{
+        color: $color-1;
+        text-align: center;
+        padding: 24px 0;
+        font-size: 32px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .proj{
+        background-color: $color-1;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover .overlay{
+            display: flex;
+        }
+    }
+
+    .overlay{
+        display: none;
+        background-color: rgba(0,0,0,.5);
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+
+        h3{
+            text-align: center;
+            color: $color-1;
+            font-size: 28px;
+            font-weight: 100;
+        }
+    }
+
+    #proj-1{
+        background-image: url(../images/remodel_1.jpg);
+    }
+    #proj-2{
+        background-image: url(../images/bathroom_1.jpg);
+    }
+    #proj-3{
+        background-image: url(../images/Metal.jpg);
+    }
+    #proj-4{
+        background-image: url(../images/landscaping.jpg);
+    }
+    #proj-5{
+        background-image: url(../images/bathroom_2.jpg);
+    }
+    #proj-6{
+        background-image: url(../images/remodel_2.jpg);
+    }
+}

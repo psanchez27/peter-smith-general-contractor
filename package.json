@@ -1,0 +1,23 @@
+{
+  "name": "peter-smith-general-contractor",
+  "version": "1.0.0",
+  "description": "Peter Smith General Contractor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o public/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psanchez27/peter-smith-general-contractor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psanchez27/peter-smith-general-contractor/issues"
+  },
+  "homepage": "https://github.com/psanchez27/peter-smith-general-contractor#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
