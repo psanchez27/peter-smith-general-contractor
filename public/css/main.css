@@ -7,7 +7,8 @@
   padding: 0; }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif; }
+  font-family: 'Roboto', Arial, sans-serif;
+  width: 100vw; }
 
 .container {
   width: 80%;
@@ -28,11 +29,21 @@ body {
   align-items: center; }
   #landing h1 {
     text-align: center;
-    font-size: 104px;
+    font-size: 6em;
     color: #fff;
     font-weight: 300;
     margin-top: -250px;
     text-transform: uppercase; }
+    #landing h1 .first {
+      opacity: 0;
+      animation: fade-in 1.2s .4s forwards; }
+    #landing h1 .second {
+      opacity: 0;
+      animation: fade-in 1.2s 1.6s forwards; }
+
+@keyframes fade-in {
+  100% {
+    opacity: 1; } }
 
 #about {
   min-height: 80vh;
@@ -46,21 +57,26 @@ body {
     justify-content: center;
     align-items: center; }
     #about #headshot img {
-      height: 350px; }
+      max-height: 350px;
+      width: auto; }
   #about #bio {
     flex: 0 0 50%;
     text-align: center; }
     #about #bio h2 {
       margin: 15px; }
     #about #bio p {
-      line-height: 1.6em; }
+      line-height: 1.6em;
+      margin: 14px; }
+    #about #bio .number {
+      font-size: 18px; }
 
 #portfolio {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/blueprints.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
   #portfolio h2 {
     color: #F2F2F2;
     text-align: center;
@@ -85,14 +101,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    cursor: pointer; }
+    cursor: default; }
     #portfolio .overlay h3 {
       text-align: center;
       color: #F2F2F2;
       font-size: 28px;
       font-weight: 100; }
   #portfolio #proj-1 {
-    background-image: url(../images/remodel_1.jpg); }
+    background-image: url(../images/remodel_2.jpg); }
   #portfolio #proj-2 {
     background-image: url(../images/bathroom_1.jpg); }
   #portfolio #proj-3 {
@@ -102,4 +118,24 @@ body {
   #portfolio #proj-5 {
     background-image: url(../images/bathroom_2.jpg); }
   #portfolio #proj-6 {
-    background-image: url(../images/remodel_2.jpg); }
+    background-image: url(../images/remodel_1.jpg); }
+
+@media screen and (max-width: 1010px) {
+  #about {
+    flex-direction: column; }
+  #portfolio .overlay {
+    display: flex; }
+  #portfolio .container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 180px)); } }
+
+@media screen and (max-width: 650px) {
+  #landing h1 {
+    font-size: 4em; }
+  #portfolio .proj {
+    height: 180px; } }
+
+@media screen and (max-width: 500px) {
+  #landing h1 {
+    font-size: 3em; }
+  #about #headshot img {
+    max-height: 180px; } }
