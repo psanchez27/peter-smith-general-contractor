@@ -1,218 +1,221 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 /* Color Theme Swatches in Hex */
-$color-1: #F2F2F2;
+$color-1: #f2f2f2;
 $color-2: #024059;
-$color-3: #F2EFBD;
-$color-4: #BF7C41;
-$color-5: #A67153;
+$color-3: #f2efbd;
+$color-4: #bf7c41;
+$color-5: #a67153;
 
 /* Color Theme Swatches in RGBA */
-$color-1-rgba: rgba(242,242,242, 1);
-$color-2-rgba: rgba(1,64,89, 1);
-$color-3-rgba: rgba(242,238,188, 1);
-$color-4-rgba: rgba(191,123,65, 1);
-$color-5-rgba: rgba(165,113,82, 1);
+$color-1-rgba: rgba(242, 242, 242, 1);
+$color-2-rgba: rgba(1, 64, 89, 1);
+$color-3-rgba: rgba(242, 238, 188, 1);
+$color-4-rgba: rgba(191, 123, 65, 1);
+$color-5-rgba: rgba(165, 113, 82, 1);
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Roboto', Arial, sans-serif;
-    width: 100vw;
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  width: 100vw;
 }
 
-.container{
-    width: 80%;
-    margin: auto;
+.container {
+  width: 80%;
+  margin: auto;
 }
 
-.solo{
-    display: block;
+.solo {
+  display: block;
 }
 
-#landing{
-    min-height: 115vh;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/landing.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#landing {
+  min-height: 115vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/landing.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    h1{
-        text-align: center;
-        font-size: 6em;
-        color: #fff;
-        font-weight: 300;
-        margin-top: -250px;
-        text-transform: uppercase;
+  h1 {
+    text-align: center;
+    font-size: 6em;
+    color: #fff;
+    font-weight: 300;
+    margin-top: -250px;
+    text-transform: uppercase;
 
-        .first{
-            opacity: 0;
-            animation: fade-in 1.2s .4s forwards;
-        }
-        .second{
-            opacity: 0;
-            animation: fade-in 1.2s 1.6s forwards;
-        }
+    .first {
+      opacity: 0;
+      animation: fade-in 1.2s 0.4s forwards;
     }
+    .second {
+      opacity: 0;
+      animation: fade-in 1.2s 1.6s forwards;
+    }
+  }
 }
 
 @keyframes fade-in {
-    100%{
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-#about{
-    min-height: 80vh;
+#about {
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-1;
+
+  #headshot {
+    flex: 0 0 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: $color-1;
-
-    #headshot{
-        flex: 0 0 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-        max-height: 350px;
-        width: auto;
-        }
+    img {
+      max-height: 350px;
+      width: auto;
     }
+  }
 
-    #bio{
-        flex: 0 0 50%;
-        text-align: center;
-        h2{
-            margin: 15px;
-        }
-        p{
-            line-height: 1.6em;
-            margin: 14px;
-        }
-        .number{
-            font-size: 18px;
-        }
+  #bio {
+    flex: 0 0 50%;
+    text-align: center;
+    h2 {
+      margin: 15px;
     }
+    p {
+      line-height: 1.6em;
+      margin: 14px;
+    }
+    .number {
+      font-size: 18px;
+    }
+  }
 }
 
-#portfolio{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/blueprints.jpg);
+#portfolio {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/blueprints.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 2rem;
+
+  h2 {
+    color: $color-1;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 32px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .proj {
+    background-color: $color-1;
+    height: 250px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 
-    h2{
-        color: $color-1;
-        text-align: center;
-        padding: 24px 0;
-        font-size: 32px;
+    &:hover .overlay {
+      display: flex;
     }
+  }
 
-    .container{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
-        gap: 15px;
-        justify-content: center;
-    }
+  .overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: default;
 
-    .proj{
-        background-color: $color-1;
-        height: 250px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    h3 {
+      text-align: center;
+      color: $color-1;
+      font-size: 28px;
+      font-weight: 100;
+    }
+  }
 
-        &:hover .overlay{
-            display: flex;
-        }
-    }
-
-    .overlay{
-        display: none;
-        background-color: rgba(0,0,0,.5);
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        cursor: default;
-
-        h3{
-            text-align: center;
-            color: $color-1;
-            font-size: 28px;
-            font-weight: 100;
-        }
-    }
-
-    #proj-1{
-        background-image: url(../images/remodel_2.jpg);
-    }
-    #proj-2{
-        background-image: url(../images/bathroom_1.jpg);
-    }
-    #proj-3{
-        background-image: url(../images/Metal.jpg);
-    }
-    #proj-4{
-        background-image: url(../images/landscaping.jpg);
-    }
-    #proj-5{
-        background-image: url(../images/bathroom_2.jpg);
-    }
-    #proj-6{
-        background-image: url(../images/remodel_1.jpg);
-    }
+  #proj-1 {
+    background-image: url(../images/remodel_2.jpg);
+  }
+  #proj-2 {
+    background-image: url(../images/bathroom_1.jpg);
+  }
+  #proj-3 {
+    background-image: url(../images/Metal.jpg);
+  }
+  #proj-4 {
+    background-image: url(../images/landscaping.jpg);
+  }
+  #proj-5 {
+    background-image: url(../images/bathroom_2.jpg);
+  }
+  #proj-6 {
+    background-image: url(../images/remodel_1.jpg);
+  }
 }
 
-@media screen and (max-width: 1010px){
-    #about{
-        flex-direction: column;
+@media screen and (max-width: 1010px) {
+  #about {
+    flex-direction: column;
+  }
+  #portfolio {
+    .overlay {
+      display: flex;
     }
-    #portfolio{
-        .overlay{
-            display: flex;
-        }
-        .container{
-            grid-template-columns: repeat(auto-fill, minmax(120px, 180px));
-        }
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 180px));
     }
+  }
 }
 
-@media screen and (max-width: 650px){
-    #landing{
-        h1{
-            font-size: 4em;
-        }
+@media screen and (max-width: 650px) {
+  #landing {
+    h1 {
+      font-size: 4em;
     }
-    
-    #portfolio{
-        .proj{
-            height: 180px;
-        }
+  }
+
+  #portfolio {
+    .proj {
+      height: 180px;
     }
+  }
 }
 
-@media screen and (max-width: 500px){
-    #landing{
-        h1{
-            font-size: 3em;
-        }
+@media screen and (max-width: 500px) {
+  #landing {
+    h1 {
+      font-size: 3em;
     }
-    #about{
-        #headshot{
-            img{
-                max-height: 180px;
-            }
-        }
+  }
+  #about {
+    #headshot {
+      img {
+        max-height: 180px;
+      }
     }
+  }
 }
