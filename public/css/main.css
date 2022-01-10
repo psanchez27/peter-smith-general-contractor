@@ -36,7 +36,7 @@ body {
     text-transform: uppercase; }
     #landing h1 .first {
       opacity: 0;
-      animation: fade-in 1.2s .4s forwards; }
+      animation: fade-in 1.2s 0.4s forwards; }
     #landing h1 .second {
       opacity: 0;
       animation: fade-in 1.2s 1.6s forwards; }
@@ -50,7 +50,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #F2F2F2; }
+  background-color: #f2f2f2; }
   #about #headshot {
     flex: 0 0 50%;
     display: flex;
@@ -76,9 +76,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-bottom: 2rem; }
   #portfolio h2 {
-    color: #F2F2F2;
+    color: #f2f2f2;
     text-align: center;
     padding: 24px 0;
     font-size: 32px; }
@@ -88,7 +89,7 @@ body {
     gap: 15px;
     justify-content: center; }
   #portfolio .proj {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     height: 250px;
     background-size: cover;
     background-position: center;
@@ -104,7 +105,7 @@ body {
     cursor: default; }
     #portfolio .overlay h3 {
       text-align: center;
-      color: #F2F2F2;
+      color: #f2f2f2;
       font-size: 28px;
       font-weight: 100; }
   #portfolio #proj-1 {
